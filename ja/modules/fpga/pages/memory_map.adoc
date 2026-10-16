@@ -60,8 +60,8 @@ image::MissionBusMemoryMap.svg[MissionBusMemoryMap]
 |- AMD GPIO         |0x5009_0000 - 0x5009_FFFF |
 |===
 
-CPUが使用する メインメモリーは アドレス 0x00000000にマッピングされています。
-メインメモリーは、ITCM (Instruction Tightly Coupled Memory)と HRMEM (High Reliability Memory)を選択する事ができます。
+CPUが使用する メインメモリは アドレス 0x00000000にマッピングされています。
+メインメモリは、ITCM (Instruction Tightly Coupled Memory)と HRMEM (High Reliability Memory)を選択する事ができます。
 ITCMと HRMEMの切り替えは Code Memory Select Registerの ITCMENビットによって行います。
 
 ITCMは FPGAの Block RAMで構成されています。 このメモリは FPGAの Configurationデータ (Bit Streamデータ)にプログラムを格納する事で、FPGAの Configuration後 すぐに CPUが動作します。
@@ -75,6 +75,6 @@ image::itcm_hrmem_select.png[itcm_hrmem_select]
 FPGAの Configuration後、アドレス 0x00000000に ITCMがマッピングされています。
 ITCMには プログラムローダーを書き込んで使用します。
 プログラムローダーは NOR Flash Memoryに書き込まれているプログラムを HRMEMに転送するために使用します。
-HRMEMのアドレス 0x60000000番地は、アドレス 0x00000000番地のミラーとなっており、プログラムローダーによって 0x60000000に書き込まれたデータは、メインメモリーを HRMEMに切り替えた時に 0x00000000から読み出す事ができます。
+HRMEMのアドレス 0x60000000番地は、アドレス 0x00000000番地のミラーとなっており、プログラムローダーによって 0x60000000に書き込まれたデータは、メインメモリを HRMEMに切り替えた時に 0x00000000から読み出す事ができます。
 プログラムローダーが HRMEMへのプログラムを書き込む最後の手順として、Code Memory Select Registerの ITCMENビットを 0に書き込みます。
-ITCMENビットの書き込みにより、メインメモリーを切り替えるとシステムにリセットがかかり、切り替えたメモリのアドレス 0x00000000から書き込まれたデータで CPUが動作します。
+ITCMENビットの書き込みにより、メインメモリを切り替えるとシステムにリセットがかかり、切り替えたメモリのアドレス 0x00000000から書き込まれたデータで CPUが動作します。

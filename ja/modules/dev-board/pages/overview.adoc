@@ -44,7 +44,7 @@ image::scobc-a1:dev-board:Appearance.svg[Appearance.svg]
 |7 |ユーザーLED |ユーザーが自由に使用できる黄緑色LEDです。
 |8 |CANコネクタ |CAN通信用のケーブルを接続できる端子台です。
 |9 |USBコネクタ |USB Micro-Bプラグを接続できます。FPGA JTAG, CPU JTAG, FPGA UART(Console), TRCH UARTで使用できます。
-|10 |ユーザー温度センサ |ユーザーが自由に使用できる温度センサです。
+|10 |ユーザー温度センサー |ユーザーが自由に使用できる温度センサーです。
 |11 |PICkitコネクタ |Microchip製のPICkitを接続できます。
 |12 |Universal Area |ユーザーが自由に使用できる領域です。
 |13 |USBコネクタ |表面にUSB Type-Aプラグ、裏面にMicro-Bプラグを接続できます。SC Bus通信の用途で使用できます。
