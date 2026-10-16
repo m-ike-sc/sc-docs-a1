@@ -24,7 +24,7 @@ image::scobc-a1:dev-board:Assembly.svg[Assembly.svg]
 |4 |六角メネジ―メネジスペーサー（M3, L=10mm）
 |===
 
-=== OBC接続インタフェース（CON1）挿抜時の注意
+=== OBC接続インターフェース（CON1）挿抜時の注意
 コネクタの損傷やコンタクトの座屈、変形を防⽌する為、以下のような嵌合作業は避け、基板に対して垂直に挿入してください。
 
 * ソケットとヘッダの嵌合口が合っていない状態での押し込み嵌合（A）
@@ -34,7 +34,7 @@ image::scobc-a1:dev-board:Assembly.svg[Assembly.svg]
 image::scobc-a1:dev-board:CON1_Insertion.svg[CON1_Insertion.svg]
 
 また抜去する場合も同様に、基板に対して垂直に行ってください。 +
-OBC接続インタフェース（CON1）については、後述するインタフェース仕様を参照してください。
+OBC接続インターフェース（CON1）については、後述するインターフェース仕様を参照してください。
 
 == 接続方法
 Dev Boardと周辺機器との接続例を以下に示します。

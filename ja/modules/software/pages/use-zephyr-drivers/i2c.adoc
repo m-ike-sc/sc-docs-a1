@@ -2,7 +2,7 @@
 
 include::scobc-a1:software:partial$link-attributes.adoc[]
 
-このアプリケーションでは、SC-OBC Module A1 用の *I2C* ドライバを使って、_Development Board_ 上のセンサから温度データを取得し、コンソールに表示します。
+このアプリケーションでは、SC-OBC Module A1 用の *I2C* ドライバを使って、_Development Board_ 上のセンサーから温度データを取得し、コンソールに表示します。
 サンプルアプリケーションは {github-a1-sample-i2c}[I2C sample] にあります。
 
 == サンプルコードの説明
@@ -107,7 +107,7 @@ I2C ドライバ API を使うには、対応するデバイス構造体を取�
 `DT_NODELABEL` に指定するラベル名は、DTS ファイルで定義されているラベルと一致している必要があります。
 Development Board の温度センサに接続されている I2C デバイスは、 {github-a1-sample-dev-board-overlay}[Development Board 用 DTS オーバーレイファイル] で定義されています。
 
-Development Board では 3 つの FPGA I2C コアが利用できますが、温度センサは `i2c0` に接続されています。
+Development Board では 3 つの FPGA I2C コアが利用できますが、温度センサーは `i2c0` に接続されています。
 
 [source, c]
 ----
@@ -138,7 +138,7 @@ I2C デバイスの準備ができていることを確認します。I2C デバ
 
 I2C ドライバが提供する API は I2C interface に記載されています。
 この例では、センサから 2 バイトの温度データを読み取る必要があるため、`i2c_burst_read` API を使って I2C デバイスから複数バイトを読み取ります。
-第 2 引数には I2C デバイスのスレーブアドレスを指定します。この例で使っている *TMP175* 温度センサでは、スレーブアドレスは `0x4B` です。
+第 2 引数には I2C デバイスのスレーブアドレスを指定します。この例で使っている *TMP175* 温度センサーでは、スレーブアドレスは `0x4B` です。
 第 3 引数には温度データを読み取るレジスタアドレスを指定します。
 このレジスタアドレスは TMP175 のデータシートから確認する必要があります。
 TMP175 の温度レジスタアドレスは `0x00` です。
@@ -161,7 +161,7 @@ TMP175 の温度データは 12 ビットで表現され、分解能は `0.0625`
 
 == DIP スイッチの状態を確認する
 
-CAUTION: Development Board 上の温度センサにアクセスするには、DIP スイッチ (_SW1_) の bit7 (SCL) と bit8 (SDA) を ON にする必要があります。現在 OFF の場合は、ON に切り替えてください。
+CAUTION: Development Board 上の温度センサーにアクセスするには、DIP スイッチ (_SW1_) の bit7 (SCL) と bit8 (SDA) を ON にする必要があります。現在 OFF の場合は、ON に切り替えてください。
 
 == コンソールを開く
 
@@ -199,7 +199,7 @@ west flash
 
 == 確認
 
-SC-OBC Module A1 の電源を入れ直すと、センサから取得した温度データがシリアルコンソールに表示されるはずです。
+SC-OBC Module A1 の電源を入れ直すと、センサーから取得した温度データがシリアルコンソールに表示されるはずです。
 
 [source, console]
 ----

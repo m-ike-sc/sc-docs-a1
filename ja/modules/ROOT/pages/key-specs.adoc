@@ -61,7 +61,7 @@ ISO 11898-1, CAN 2.0A, CAN 2.0B 準拠
 
 | Space Communication Bus (SCBus)
 a|
-Space Cubics提案のUSBベース通信インタフェース準拠 (T.B.D.)
+Space Cubics提案のUSBベース通信インターフェース準拠 (T.B.D.)
 
 * 12 Mb/s 対応 (USB Full-Speed)
 

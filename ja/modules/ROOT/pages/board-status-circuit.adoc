@@ -23,7 +23,7 @@ Current and Voltage Monitorの監視ノードは以下の通りです。
 Current and Voltage Monitorのアクセス方法は INA3221-Q1のデータシートを参照してください。
 
 == 温度状態監視
-OBC Moduleには、OBCの温度状態をモニタするため 3つの温度センサーを搭載しています。
+OBC Moduleには、OBCの温度状態をモニターするため 3つの温度センサーを搭載しています。
 温度センサー ICには、TEXAS INSTRUMENTSの TMQ175-Q1が採用されており、I2C Interfaceによって TRCHと FPGAからデータを読み出す事ができます。
 
 温度センサーの搭載位置と Target Addressは以下の通りです。
