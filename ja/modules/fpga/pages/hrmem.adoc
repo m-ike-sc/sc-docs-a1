@@ -21,7 +21,7 @@ HRMEMのレジスタは、Base Address 0x40500000に配置されています。
 |===
 |Offset |Symbol              |Register                                    |Initial
 |0x0000 |HRMEM_ECCCOLENR     |ECC Error Collect Enable Register           |0x00000001
-|0x0008 |HRMEM_MEMSCRCTRLR   |Memory Scrubing Control Register            |0x06FF0001
+|0x0008 |HRMEM_MEMSCRCTRLR   |Memory Scrubbing Control Register           |0x06FF0001
 |0x0010 |HRMEM_INTSTR        |HRMEM Interrupt Status Register             |0x00000000
 |0x0014 |HRMEM_INTENR        |HRMEM Interrupt Enable Register             |0x00000000
 |0x0020 |HRMEM_ECC1ERRCNTR   |1Bit ECC Error Count Register               |0x00000000
@@ -50,10 +50,10 @@ ECC Error Collect Enable Registerは、1bit ECCエラー検出時にメモリの
 1: メモリ修復機能 ON                                    |R/W
 |===
 
-=== Memory Scrubing Control Register (Offset: 0x0008)
+=== Memory Scrubbing Control Register (Offset: 0x0008)
 
-Memory Scrubing Control Registerは、メモリスクラビング機能の設定を行うためのレジスタです。
-このレジスタのMemory Scrubing EnableをONにすると、SRAMの全フィールドの定期的な読み出し行い書き込まれたデータのチェックを行います。
+Memory Scrubbing Control Registerは、メモリスクラビング機能の設定を行うためのレジスタです。
+このレジスタのMemory Scrubbing EnableをONにすると、SRAMの全フィールドの定期的な読み出し行い書き込まれたデータのチェックを行います。
 
 メモリスクラビング機能は、SRAMの全領域のデータに対し定期的なエラーチェックを行う機能です。
 メモリスクラビング機能により検出したデータのエラーを修復する場合には、メモリ修復機能 (ECC Error Collect Enable RegisterのECCCOLENビット)も有効にする必要があります。
@@ -62,11 +62,11 @@ MEMSCRCYCはメモリスクラビングのための メモリ読み出しが発�
 MEMSCRCYCの初期値は 1791に設定されています。
 この値は、およそ 1分でメモリの全領域を検査できる設計値になっています。
 
-.Memory Scrubing Control Register ビットフィールド
+.Memory Scrubbing Control Register ビットフィールド
 [cols="1,3,3,12,1",options="header",]
 |===
 |bit   |Symbol      |Field                 |Description |R/W
-|31:16 |MEMSCRCYC   |Memory Scrubing Cycle              |メモリスクラビングによる読み出しアクセスの間隔を設定するビットです。設定はシステムクロックのサイクル数で設定します。 +
+|31:16 |MEMSCRCYC   |Memory Scrubbing Cycle             |メモリスクラビングによる読み出しアクセスの間隔を設定するビットです。設定はシステムクロックのサイクル数で設定します。 +
 0: 設定禁止 +
 1: 1 サイクル +
 2: 2 サイクル +
@@ -74,11 +74,11 @@ MEMSCRCYCの初期値は 1791に設定されています。
 65535: 65535 サイクル +
 初期状態では、1791 Cycle間隔に設定されています。         |R/W
 |15:9  |-           |Reserved                           |Reserved    |-
-|8     |COLFSRDSTPB |Memory Scrubing Arbitration Enable |エラー修復データ FIFOが Full状態でのメモリスクラビング制御方法を設定するビットです。 +
+|8     |COLFSRDSTPB |Memory Scrubbing Arbitration Enable |エラー修復データ FIFOが Full状態でのメモリスクラビング制御方法を設定するビットです。 +
 本ビットが0の時、エラー修復データ FIFOがFullになるとメモリスクラビング機能を停止します。 +
 また、本ビットが 1の時、エラー修復データ FIFOがFullになってもメモリスクラビング機能が停止しません。新しく検出したエラーの修復データは破棄します。|R/W
 |7:1   |-           |Reserved               |Reserved |-
-|0     |MEMSCRBEN   |Memory Scrubing Enable |メモリスクラビング機能のEnable設定を行います。0: メモリスクラビング機能 OFF 1:メモリスクラビング機能 ON |R/W
+|0     |MEMSCRBEN   |Memory Scrubbing Enable |メモリスクラビング機能のEnable設定を行います。0: メモリスクラビング機能 OFF 1:メモリスクラビング機能 ON |R/W
 |===
 
 === HRMEM Interrupt Status Register (Offset: 0x0010)

@@ -121,7 +121,7 @@ User IO Group 1は FPGAの Bank 34、User IO Group 2は FPGAの Bank 35を専有
 | Group 2| UIO2_(Number)| 16本| Bank 35| VDD_UIO2
 |====
 
-User IO Groupは VDD_UIO1, VDD_UIO02に任意の IO電圧を印加して使用する事ができます。
+User IO Groupは VDD_UIO1, VDD_UIO2に任意の IO電圧を印加して使用する事ができます。
 FPGAで使用したいIOに合ったIO電圧を印加してください。
 
 FPGAの IO電源 (VCCO)は、FPGAの電源投入シーケンスに従い投入する必要があります。
