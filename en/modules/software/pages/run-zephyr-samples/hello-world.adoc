@@ -3,7 +3,7 @@ Next is the ever-popular *Hello World* sample. Before running Hello World, we ne
 
 == Open Console
 
-Connect the cable between your SC-OBC Module A1 and your PC, then open the console on terminal:
+Connect the cable between your SC-OBC Module A1 and your PC, then open the console in a terminal:
 
 [source, console]
 ----
@@ -14,7 +14,7 @@ NOTE: To use the Zephyr console, bit3 (RX) and bit4 (TX) of DIP Switch (_SW1_) m
 
 == Build
 
-Then open the another terminal, and build the sample.
+Then open another terminal, and build the sample.
 
 [source, console]
 ----
@@ -35,5 +35,5 @@ west flash
 ----
 
 == Confirm
-After power-cycle the SC-OBC Module A1, you should see the Hello World string on your serial console.
+After power-cycling the SC-OBC Module A1, you should see the Hello World string on your serial console.
 If you want to exit the `tio` console, first press `Ctrl + t`, followed by `q`.
