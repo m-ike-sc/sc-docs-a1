@@ -2,7 +2,9 @@
 
 The definitions of terms used in this document are as follows.
 
-OBC:: Refers to the SC-OBC Module A1.
+OBC:: Abbreviation for On Board Computer.
+In this document, it refers to the entire system consisting of the SC-OBC Module A1 board, software, and the soft core implemented in the FPGA.
+OBC Module specifically refers to the product board.
 
 TRCH:: Abbreviation for Timing, Reset, Configuration & Health Controller.
 The OBC employs the PIC16LF877.
@@ -19,7 +21,8 @@ UIO1:: Refers to User IO Group 1 within the OBC's FPGA.
 
 UIO2:: Refers to User IO Group 2 within the OBC's FPGA.
 
-UIO3:: Refers to User IO Group 3 within the OBC's FPGA.
+UIO3:: Refers to User IO Group 3 within the OBC.
+Depending on the hardware option, it is connected to either the TRCH or the FPGA.
 
 UIO4:: Refers to User IO Group 4 within the OBC's FPGA.
 

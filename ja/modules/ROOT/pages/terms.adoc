@@ -2,7 +2,8 @@
 
 本書の中で使用する用語の定義は以下の通りです。
 
-OBC:: SC-OBC Module A1 を示す。
+OBC:: On Board Computerの略であり、本書では SC-OBC Module A1 を構成する基板、ソフトウェアおよびFPGAにインプリされたソフトコアを含むシステム全体を示す。
+OBC Module と記載されている場合は、特に製品基板を指す。
 
 TRCH:: Timing, Reset, Config & Health Controller の略。
 OBC では PIC16LF877 を採用している。
@@ -19,7 +20,8 @@ UIO1:: OBC の FPGA における User IO Group 1 を示す。
 
 UIO2:: OBC の FPGA における User IO Group 2 を示す。
 
-UIO3:: OBC の FPGA における User IO Group 3 を示す。
+UIO3:: OBC における User IO Group 3 を示す。
+ハードウェアオプションによって TRCH または FPGA に接続される。
 
 UIO4:: OBC の FPGA における User IO Group 4 を示す。
 

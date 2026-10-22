@@ -1,6 +1,6 @@
 = Interface Specifications
 
-This section outlines the interface specifications for the SC-OBC Module A1 Module.
+This section outlines the interface specifications for the SC-OBC Module A1.
 
 == CON1 (IO Board Interface)
 The IO Board interface connects the OBC Module and the IO Board.
